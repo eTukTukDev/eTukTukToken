@@ -196,7 +196,7 @@ contract eTukTukToken is Context, IBEP20Metadata, Ownable {
   string private _name;
   string private _symbol;
   uint8 private constant _decimals = 18;
-  uint256 public constant presaleReserve = 120_000_000 * (10 ** _decimals);
+  uint256 public constant presaleAndProjectReserve = 1_820_000_000 * (10 ** _decimals);
   uint256 public constant stakingReserve = 80_000_000 * (10 ** _decimals);
   uint256 public constant liquidityReserve = 100_000_000 * (10 ** _decimals);
 
@@ -208,7 +208,7 @@ contract eTukTukToken is Context, IBEP20Metadata, Ownable {
   constructor(string memory name_, string memory symbol_) {
     _name = name_;
     _symbol = symbol_;
-    _mint(0x19AAe3bbF810907F453D7d015D2C7E5d87Ca5644, presaleReserve);
+    _mint(0x19AAe3bbF810907F453D7d015D2C7E5d87Ca5644, presaleAndProjectReserve);
     _mint(0xba634072c3c05465714c659D4324c364e4f16ECD, stakingReserve);
     _mint(0x2BC228cA83b2FfCf9347f057B277D2E25be36C65, liquidityReserve);
   }
